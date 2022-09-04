@@ -1,0 +1,15 @@
+def select_sort(array):
+    n=array[0]
+    for i in range(0,len(array)-1):
+        for j in range(i,len(array)):
+            if array[j]<n:
+                n=array[j]
+                t=array[i]
+                array[i]=array[j]
+                array[j]=t
+        n=array[i+1]
+    return array
+
+if __name__=='__main__':
+    array=[10, 17, 50, 77, 30, 24, 27, 45, 15, 5, 21,35]
+    print(select_sort(array))
